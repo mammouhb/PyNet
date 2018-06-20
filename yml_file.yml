@@ -1,0 +1,10 @@
+- IP_addr: 192.168.2.1
+  device: juniper
+- IP_addr: 192.168.1.1
+  device: cisco
+- - 0
+  - 1
+- IP_addr: 192.168.3.1   
+  device: brocade
+- IP_addr: 192.168.4.1  
+  device: arista
