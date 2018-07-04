@@ -41,6 +41,19 @@ def main():
    
    output = send_command(remote_conn, 'show version')
 
+   list_intf = ["loop1999", "loop2999", "loop3999", "loop4999", "loop5999", "loop6999", "loop7999", "loop8999", "loop9999"]
+   output = send_command(remote_conn, 'configure terminal')
+   for intf in range(0, len(list_intf)):
+      cmd = "interface " + list_intf[intf]
+      output = send_command(remote_conn, cmd)
+      cmd = "description " + list_intf[intf]
+      output = send_command(remote_conn, cmd)
+      intf += 1
+   output = send_command(remote_conn, 'end')
+   output = send_command(remote_conn, 'show ip interface brief')
+   
+
+
 
    remote_conn.close()
  
